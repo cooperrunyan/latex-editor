@@ -4,83 +4,99 @@
 
 'use client';
 
-import { useCallback, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { IoCopyOutline, IoDownloadOutline } from "react-icons/io5";
+import { Button, Tooltip } from '@heroui/react';
+import { Copy, Download } from 'lucide-react';
 
-import { NextUIProvider, Button, Tooltip } from '@nextui-org/react';
-import {
-  Banner,
-  EditorPanel,
-  Footer,
-  LaTeXPanel,
-  LaTeXPanelRef,
-  ToolPanel,
-} from '@/components';
+import { Banner } from '@/ui/banner';
+import { EditorPanel } from '@/ui/editor-panel';
+import { Footer } from '@/ui/footer';
+import { LaTeXPanel, latexPanelRef } from '@/ui/latex-panel';
+import { ToolPanel } from '@/ui/tool-panel';
 
-const Home = () => {
-  const latexPanelRef = useRef<LaTeXPanelRef>(null);
+import 'katex/dist/katex.min.css';
+import 'katex/dist/contrib/mhchem';
+import 'katex/dist/contrib/render-a11y-string';
 
-  const [isDownloading, setIsDownloading] = useState(false)
-  const [isCopying, setIsCopying] = useState(false)
+export default function Home() {
+  const latexPanelRef = useRef<latexPanelRef>(null);
+
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [isCopying, setIsCopying] = useState(false);
+
+  // Conditionally import the copy-tex module on the client side
+  useEffect(() => {
+    require('katex/contrib/copy-tex');
+  }, []);
+
+  async function handleCopy() {
+    setIsCopying(true);
+    try {
+      await latexPanelRef.current?.copyToClipboard();
+    } finally {
+      setIsCopying(false);
+    }
+  }
+
+  async function handleDownload() {
+    setIsDownloading(true);
+    try {
+      await latexPanelRef.current?.download();
+    } finally {
+      setIsDownloading(false);
+    }
+  }
 
   return (
-    <NextUIProvider>
+    <>
       <Banner />
       <div className="flex h-screen flex-col *:h-full *:max-h-[calc(50%-1rem)]">
-        <div className="flex flex-row border-b-1.5 *:w-1/2">
+        <div className="flex flex-row border-b-1.5 *:w-1/2 dark:border-b-default-50">
           <EditorPanel latexPanelRef={latexPanelRef} />
           <ToolPanel />
         </div>
         <LaTeXPanel ref={latexPanelRef} />
-        <div className='absolute right-4 bottom-4 !h-fit flex gap-2'>
+        <div className="absolute bottom-4 right-4 flex !h-fit gap-2">
           <Tooltip
-              disableAnimation
-              closeDelay={0}
-              className="text-xs"
-              content="Copy"
-            >
+            disableAnimation
+            closeDelay={0}
+            className="text-xs"
+            content="Copy"
+          >
             <Button
-                variant="light"
-                isIconOnly
-                className="text-base border-1"
-                isLoading={isCopying}
-                onClick={() => {
-                  setIsCopying(() => true);
-                  latexPanelRef.current?.copyToClipboard().finally(() => setIsCopying(() => false)) ;
-                }}
-              >
-                <IoCopyOutline />
-              </Button>
-            </Tooltip>
-            <Tooltip
-              disableAnimation
-              closeDelay={0}
-              className="text-xs"
-              content="Download"
+              aria-label="Copy LaTeX code to clipboard"
+              variant="light"
+              isIconOnly
+              className="border-1 text-base"
+              isLoading={isCopying}
+              radius="sm"
+              onClick={handleCopy}
             >
-              <Button
-                variant="light"
-                isIconOnly
-                className="text-base border-1"
-                isLoading={isDownloading}
-                onClick={async () => {
-                  setIsDownloading(() => true);
-                  try {
-                    await latexPanelRef.current?.download();
-                  } finally {
-                    setIsDownloading(() => false);
-                  }
-                }}
-              >
-                <IoDownloadOutline />
-              </Button>
-            </Tooltip>
-          </div>
+              <Copy size={18} />
+            </Button>
+          </Tooltip>
+          <Tooltip
+            disableAnimation
+            closeDelay={0}
+            className="text-xs"
+            content="Download"
+          >
+            <Button
+              aria-label="Download LaTeX code as a file"
+              variant="light"
+              isIconOnly
+              className="border-1 text-base"
+              isLoading={isDownloading}
+              radius="sm"
+              onClick={handleDownload}
+            >
+              <Download size={18} />
+            </Button>
+          </Tooltip>
         </div>
+      </div>
       <Footer />
-    </NextUIProvider>
+    </>
   );
-};
-
-export default Home;
+}

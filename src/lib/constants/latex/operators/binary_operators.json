@@ -1,0 +1,349 @@
+{
+  "title": "Binary Operators",
+  "dispLen": 8,
+  "symbols": [
+    {
+      "name": "Plus",
+      "lbl": "+",
+      "val": "+"
+    },
+    {
+      "name": "Center Dot",
+      "lbl": "\\cdot",
+      "val": "\\cdot "
+    },
+    {
+      "name": "Greater Dot",
+      "lbl": "\\gtrdot",
+      "val": "\\gtrdot "
+    },
+    {
+      "name": "P Mod",
+      "lbl": "\\scriptsize\\text{(\\!mod\\!)}",
+      "val": " \\pmod{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Minus",
+      "lbl": "-",
+      "val": "-"
+    },
+    {
+      "name": "Center Dot P",
+      "lbl": "\\cdotp",
+      "val": "\\cdotp "
+    },
+    {
+      "name": "Intercal",
+      "lbl": "\\intercal",
+      "val": "\\intercal "
+    },
+    {
+      "name": "Pod",
+      "lbl": "\\scriptsize x \\pod{a}",
+      "val": " \\pod{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Slash",
+      "lbl": "/",
+      "val": "/"
+    },
+    {
+      "name": "Center Dot Alt",
+      "lbl": "\\centerdot",
+      "val": "\\centerdot "
+    },
+    {
+      "name": "Logical And",
+      "lbl": "\\land",
+      "val": "\\land "
+    },
+    {
+      "name": "RHD",
+      "lbl": "\\rhd",
+      "val": "\\rhd "
+    },
+    {
+      "name": "Asterisk",
+      "lbl": "*",
+      "val": "*"
+    },
+    {
+      "name": "Circle",
+      "lbl": "\\circ",
+      "val": "\\circ "
+    },
+    {
+      "name": "Left Three Times",
+      "lbl": "\\leftthreetimes",
+      "val": "\\leftthreetimes "
+    },
+    {
+      "name": "Right Three Times",
+      "lbl": "\\rightthreetimes",
+      "val": "\\rightthreetimes "
+    },
+    {
+      "name": "Amalgam",
+      "lbl": "\\amalg",
+      "val": "\\amalg "
+    },
+    {
+      "name": "Circled Asterisk",
+      "lbl": "\\circledast",
+      "val": "\\circledast "
+    },
+    {
+      "name": "LDOTP",
+      "lbl": "\\ldotp",
+      "val": "\\ldotp "
+    },
+    {
+      "name": "Right Times",
+      "lbl": "\\rtimes",
+      "val": "\\rtimes "
+    },
+    {
+      "name": "And",
+      "lbl": "\\And",
+      "val": "\\And "
+    },
+    {
+      "name": "Circled Circle",
+      "lbl": "\\circledcirc",
+      "val": "\\circledcirc "
+    },
+    {
+      "name": "Logical Or",
+      "lbl": "\\lor",
+      "val": "\\lor "
+    },
+    {
+      "name": "Set Minus",
+      "lbl": "\\setminus",
+      "val": "\\setminus "
+    },
+    {
+      "name": "Asterisk Alt",
+      "lbl": "\\ast",
+      "val": "\\ast "
+    },
+    {
+      "name": "Circled Dash",
+      "lbl": "\\circleddash",
+      "val": "\\circleddash "
+    },
+    {
+      "name": "Less Dot",
+      "lbl": "\\lessdot",
+      "val": "\\lessdot "
+    },
+    {
+      "name": "Small Set Minus",
+      "lbl": "\\smallsetminus",
+      "val": "\\smallsetminus "
+    },
+    {
+      "name": "Bar Wedge",
+      "lbl": "\\barwedge",
+      "val": "\\barwedge "
+    },
+    {
+      "name": "Cup",
+      "lbl": "\\Cup",
+      "val": "\\Cup "
+    },
+    {
+      "name": "LHD",
+      "lbl": "\\lhd",
+      "val": "\\lhd "
+    },
+    {
+      "name": "Square Cap",
+      "lbl": "\\sqcap",
+      "val": "\\sqcap "
+    },
+    {
+      "name": "Big Circle",
+      "lbl": "\\bigcirc",
+      "val": "\\bigcirc "
+    },
+    {
+      "name": "Union",
+      "lbl": "\\cup",
+      "val": "\\cup "
+    },
+    {
+      "name": "Left Times",
+      "lbl": "\\ltimes",
+      "val": "\\ltimes "
+    },
+    {
+      "name": "Square Cup",
+      "lbl": "\\sqcup",
+      "val": "\\sqcup "
+    },
+    {
+      "name": "B Mod",
+      "lbl": "\\scriptsize\\text{bmod}",
+      "val": " \\bmod "
+    },
+    {
+      "name": "Curly Vee",
+      "lbl": "\\curlyvee",
+      "val": "\\curlyvee "
+    },
+    {
+      "name": "X Mod A",
+      "lbl": "\\scriptsize\\text{mod}",
+      "val": " \\mod{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Times",
+      "lbl": "\\times",
+      "val": "\\times "
+    },
+    {
+      "name": "Box Dot",
+      "lbl": "\\boxdot",
+      "val": "\\boxdot "
+    },
+    {
+      "name": "Curly Wedge",
+      "lbl": "\\curlywedge",
+      "val": "\\curlywedge "
+    },
+    {
+      "name": "Minus Plus",
+      "lbl": "\\mp",
+      "val": "\\mp "
+    },
+    {
+      "name": "UNLHD",
+      "lbl": "\\unlhd",
+      "val": "\\unlhd "
+    },
+    {
+      "name": "Box Minus",
+      "lbl": "\\boxminus",
+      "val": "\\boxminus "
+    },
+    {
+      "name": "Divide",
+      "lbl": "\\div",
+      "val": "\\div "
+    },
+    {
+      "name": "ODOT",
+      "lbl": "\\odot",
+      "val": "\\odot "
+    },
+    {
+      "name": "UNRHD",
+      "lbl": "\\unrhd",
+      "val": "\\unrhd "
+    },
+    {
+      "name": "Box Plus",
+      "lbl": "\\boxplus",
+      "val": "\\boxplus "
+    },
+    {
+      "name": "Divide on Times",
+      "lbl": "\\divideontimes",
+      "val": "\\divideontimes "
+    },
+    {
+      "name": "OMINUS",
+      "lbl": "\\ominus",
+      "val": "\\ominus "
+    },
+    {
+      "name": "U Plus",
+      "lbl": "\\uplus",
+      "val": "\\uplus "
+    },
+    {
+      "name": "Box Times",
+      "lbl": "\\boxtimes",
+      "val": "\\boxtimes "
+    },
+    {
+      "name": "Dot Plus",
+      "lbl": "\\dotplus",
+      "val": "\\dotplus "
+    },
+    {
+      "name": "OPLUS",
+      "lbl": "\\oplus",
+      "val": "\\oplus "
+    },
+    {
+      "name": "Logical Or Alt",
+      "lbl": "\\vee",
+      "val": "\\vee "
+    },
+    {
+      "name": "Bullet",
+      "lbl": "\\bullet",
+      "val": "\\bullet "
+    },
+    {
+      "name": "Double Bar Wedge",
+      "lbl": "\\doublebarwedge",
+      "val": "\\doublebarwedge "
+    },
+    {
+      "name": "OTIMES",
+      "lbl": "\\otimes",
+      "val": "\\otimes "
+    },
+    {
+      "name": "Vee Bar",
+      "lbl": "\\veebar",
+      "val": "\\veebar "
+    },
+    {
+      "name": "Cap",
+      "lbl": "\\Cap",
+      "val": "\\Cap "
+    },
+    {
+      "name": "Double Cap",
+      "lbl": "\\doublecap",
+      "val": "\\doublecap "
+    },
+    {
+      "name": "OSLASH",
+      "lbl": "\\oslash",
+      "val": "\\oslash "
+    },
+    {
+      "name": "Wedge",
+      "lbl": "\\wedge",
+      "val": "\\wedge "
+    },
+    {
+      "name": "Cap Alt",
+      "lbl": "\\cap",
+      "val": "\\cap "
+    },
+    {
+      "name": "Double Cup",
+      "lbl": "\\doublecup",
+      "val": "\\doublecup "
+    },
+    {
+      "name": "Plus Minus",
+      "lbl": "\\pm",
+      "val": "\\pm "
+    },
+    {
+      "name": "WR",
+      "lbl": "\\wr",
+      "val": "\\wr "
+    }
+  ]
+}

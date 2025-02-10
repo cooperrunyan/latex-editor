@@ -1,0 +1,54 @@
+{
+  "title": "Fractions",
+  "dispLen": 3,
+  "sqBtn": false,
+  "symbols": [
+    {
+      "name": "Fraction",
+      "lbl": "\\frac{a}{b}",
+      "val": "\\frac{}{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Text Fraction",
+      "lbl": "\\tfrac{a}{b}",
+      "val": "\\tfrac{}{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Genfrac",
+      "lbl": "\\genfrac(]{2pt}{}{a}{a+1}",
+      "val": "\\genfrac(]{0pt}{}{}{}",
+      "caretPos": 10
+    },
+    {
+      "name": "Over",
+      "lbl": "{a \\over b}",
+      "val": "{ \\over }",
+      "caretPos": 1
+    },
+    {
+      "name": "Display Fraction",
+      "lbl": "\\dfrac{a}{b}",
+      "val": "\\dfrac{}{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Above",
+      "lbl": "{a \\above{2pt} b+1}",
+      "val": "{ \\above{0pt} }",
+      "caretPos": 1
+    },
+    {
+      "name": "A/B",
+      "lbl": "a/b",
+      "val": "/"
+    },
+    {
+      "name": "Continued Fraction",
+      "lbl": "\\cfrac{a}{1 + \\cfrac{1}{b}}",
+      "val": "\\cfrac{}{ \\cfrac{}{}}",
+      "caretPos": 7
+    }
+  ]
+}

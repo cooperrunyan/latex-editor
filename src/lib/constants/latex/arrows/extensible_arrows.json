@@ -1,0 +1,121 @@
+{
+  "title": "Extensible Arrows",
+  "dispLen": 4,
+  "sqBtn": false,
+  "symbols": [
+    {
+      "name": "XleftarrowABC",
+      "lbl": "\\xleftarrow{abc}",
+      "val": "\\xleftarrow{}",
+      "caretPos": 12
+    },
+    {
+      "name": "XrightarrowOverUnder",
+      "lbl": "\\xrightarrow[under]{over}",
+      "val": "\\xrightarrow[]{}",
+      "caretPos": 13
+    },
+    {
+      "name": "XLeftarrowABC",
+      "lbl": "\\xLeftarrow{abc}",
+      "val": "\\xLeftarrow{}",
+      "caretPos": 12
+    },
+    {
+      "name": "XRightarrowABC",
+      "lbl": "\\xRightarrow{abc}",
+      "val": "\\xRightarrow{}",
+      "caretPos": 13
+    },
+    {
+      "name": "XleftrightarrowABC",
+      "lbl": "\\xleftrightarrow{abc}",
+      "val": "\\xleftrightarrow{}",
+      "caretPos": 17
+    },
+    {
+      "name": "XLeftrightarrowABC",
+      "lbl": "\\xLeftrightarrow{abc}",
+      "val": "\\xLeftrightarrow{}",
+      "caretPos": 17
+    },
+    {
+      "name": "XhookleftarrowABC",
+      "lbl": "\\xhookleftarrow{abc}",
+      "val": "\\xhookleftarrow{}",
+      "caretPos": 16
+    },
+    {
+      "name": "XhookrightarrowABC",
+      "lbl": "\\xhookrightarrow{abc}",
+      "val": "\\xhookrightarrow{}",
+      "caretPos": 17
+    },
+    {
+      "name": "XtwoheadleftarrowABC",
+      "lbl": "\\xtwoheadleftarrow{abc}",
+      "val": "\\xtwoheadleftarrow{}",
+      "caretPos": 19
+    },
+    {
+      "name": "XtwoheadrightarrowABC",
+      "lbl": "\\xtwoheadrightarrow{abc}",
+      "val": "\\xtwoheadrightarrow{}",
+      "caretPos": 20
+    },
+    {
+      "name": "XleftharpoonupABC",
+      "lbl": "\\xleftharpoonup{abc}",
+      "val": "\\xleftharpoonup{}",
+      "caretPos": 16
+    },
+    {
+      "name": "XrightharpoonupABC",
+      "lbl": "\\xrightharpoonup{abc}",
+      "val": "\\xrightharpoonup{}",
+      "caretPos": 17
+    },
+    {
+      "name": "XleftharpoondownABC",
+      "lbl": "\\xleftharpoondown{abc}",
+      "val": "\\xleftharpoondown{}",
+      "caretPos": 18
+    },
+    {
+      "name": "XrightharpoondownABC",
+      "lbl": "\\xrightharpoondown{abc}",
+      "val": "\\xrightharpoondown{}",
+      "caretPos": 19
+    },
+    {
+      "name": "XleftrightharpoonsABC",
+      "lbl": "\\xleftrightharpoons{abc}",
+      "val": "\\xleftrightharpoons{}",
+      "caretPos": 20
+    },
+    {
+      "name": "XrightleftharpoonsABC",
+      "lbl": "\\xrightleftharpoons{abc}",
+      "val": "\\xrightleftharpoons{}",
+      "caretPos": 20
+    },
+    {
+      "name": "XtofromABC",
+      "lbl": "\\xtofrom{abc}",
+      "val": "\\xtofrom{}",
+      "caretPos": 9
+    },
+    {
+      "name": "XmapstoABC",
+      "lbl": "\\xmapsto{abc}",
+      "val": "\\xmapsto{}",
+      "caretPos": 9
+    },
+    {
+      "name": "XlongequalABC",
+      "lbl": "\\xlongequal{abc}",
+      "val": "\\xlongequal{}",
+      "caretPos": 12
+    }
+  ]
+}

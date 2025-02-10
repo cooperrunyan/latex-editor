@@ -1,0 +1,30 @@
+{
+  "title": "Overlap",
+  "dispLen": 2,
+  "symbols": [
+    {
+      "name": "Mathllap",
+      "lbl": "{=}\\mathllap{/\\,}",
+      "val": "{}\\mathllap{}",
+      "caretPos": 1
+    },
+    {
+      "name": "Smash",
+      "lbl": "\\left(x^{\\smash{2}}\\right)",
+      "val": "\\smash{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Mathrlap",
+      "lbl": "\\mathrlap{\\,/}{=}",
+      "val": "\\mathrlap{}{}",
+      "caretPos": 10
+    },
+    {
+      "name": "SmashRoot",
+      "lbl": "\\sqrt{\\smash[b]{y}}",
+      "val": "\\sqrt{\\smash[b]{}}",
+      "caretPos": 17
+    }
+  ]
+}

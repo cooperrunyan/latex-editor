@@ -1,0 +1,738 @@
+{
+  "title": "Colors",
+  "dispLen": 8,
+  "symbols": [
+    {
+      "name": "IndianRed",
+      "lbl": "{\\color{IndianRed}\\blacksquare}",
+      "val": "{\\color{IndianRed} }",
+      "caretPos": 19
+    },
+    {
+      "name": "LightCoral",
+      "lbl": "{\\color{LightCoral}\\blacksquare}",
+      "val": "{\\color{LightCoral} }",
+      "caretPos": 20
+    },
+    {
+      "name": "Salmon",
+      "lbl": "{\\color{Salmon}\\blacksquare}",
+      "val": "{\\color{Salmon} }",
+      "caretPos": 16
+    },
+    {
+      "name": "DarkSalmon",
+      "lbl": "{\\color{DarkSalmon}\\blacksquare}",
+      "val": "{\\color{DarkSalmon} }",
+      "caretPos": 20
+    },
+    {
+      "name": "LightSalmon",
+      "lbl": "{\\color{LightSalmon}\\blacksquare}",
+      "val": "{\\color{LightSalmon} }",
+      "caretPos": 21
+    },
+    {
+      "name": "Crimson",
+      "lbl": "{\\color{Crimson}\\blacksquare}",
+      "val": "{\\color{Crimson} }",
+      "caretPos": 17
+    },
+    {
+      "name": "Red",
+      "lbl": "{\\color{Red}\\blacksquare}",
+      "val": "{\\color{Red} }",
+      "caretPos": 13
+    },
+    {
+      "name": "FireBrick",
+      "lbl": "{\\color{FireBrick}\\blacksquare}",
+      "val": "{\\color{FireBrick} }",
+      "caretPos": 19
+    },
+    {
+      "name": "DarkRed",
+      "lbl": "{\\color{DarkRed}\\blacksquare}",
+      "val": "{\\color{DarkRed} }",
+      "caretPos": 17
+    },
+    {
+      "name": "Pink",
+      "lbl": "{\\color{Pink}\\blacksquare}",
+      "val": "{\\color{Pink} }",
+      "caretPos": 14
+    },
+    {
+      "name": "LightPink",
+      "lbl": "{\\color{LightPink}\\blacksquare}",
+      "val": "{\\color{LightPink} }",
+      "caretPos": 19
+    },
+    {
+      "name": "HotPink",
+      "lbl": "{\\color{HotPink}\\blacksquare}",
+      "val": "{\\color{HotPink} }",
+      "caretPos": 17
+    },
+    {
+      "name": "DeepPink",
+      "lbl": "{\\color{DeepPink}\\blacksquare}",
+      "val": "{\\color{DeepPink} }",
+      "caretPos": 18
+    },
+    {
+      "name": "MediumVioletRed",
+      "lbl": "{\\color{MediumVioletRed}\\blacksquare}",
+      "val": "{\\color{MediumVioletRed} }",
+      "caretPos": 25
+    },
+    {
+      "name": "PaleVioletRed",
+      "lbl": "{\\color{PaleVioletRed}\\blacksquare}",
+      "val": "{\\color{PaleVioletRed} }",
+      "caretPos": 23
+    },
+    {
+      "name": "Coral",
+      "lbl": "{\\color{Coral}\\blacksquare}",
+      "val": "{\\color{Coral} }",
+      "caretPos": 15
+    },
+    {
+      "name": "Tomato",
+      "lbl": "{\\color{Tomato}\\blacksquare}",
+      "val": "{\\color{Tomato} }",
+      "caretPos": 16
+    },
+    {
+      "name": "OrangeRed",
+      "lbl": "{\\color{OrangeRed}\\blacksquare}",
+      "val": "{\\color{OrangeRed} }",
+      "caretPos": 19
+    },
+    {
+      "name": "DarkOrange",
+      "lbl": "{\\color{DarkOrange}\\blacksquare}",
+      "val": "{\\color{DarkOrange} }",
+      "caretPos": 20
+    },
+    {
+      "name": "Orange",
+      "lbl": "{\\color{Orange}\\blacksquare}",
+      "val": "{\\color{Orange} }",
+      "caretPos": 16
+    },
+    {
+      "name": "Gold",
+      "lbl": "{\\color{Gold}\\blacksquare}",
+      "val": "{\\color{Gold} }",
+      "caretPos": 14
+    },
+    {
+      "name": "Yellow",
+      "lbl": "{\\color{Yellow}\\blacksquare}",
+      "val": "{\\color{Yellow} }",
+      "caretPos": 16
+    },
+    {
+      "name": "LightYellow",
+      "lbl": "{\\color{LightYellow}\\blacksquare}",
+      "val": "{\\color{LightYellow} }",
+      "caretPos": 21
+    },
+    {
+      "name": "LemonChiffon",
+      "lbl": "{\\color{LemonChiffon}\\blacksquare}",
+      "val": "{\\color{LemonChiffon} }",
+      "caretPos": 22
+    },
+    {
+      "name": "LightGoldenrodYellow",
+      "lbl": "{\\color{LightGoldenrodYellow}\\blacksquare}",
+      "val": "{\\color{LightGoldenrodYellow} }",
+      "caretPos": 30
+    },
+    {
+      "name": "PapayaWhip",
+      "lbl": "{\\color{PapayaWhip}\\blacksquare}",
+      "val": "{\\color{PapayaWhip} }",
+      "caretPos": 20
+    },
+    {
+      "name": "Moccasin",
+      "lbl": "{\\color{Moccasin}\\blacksquare}",
+      "val": "{\\color{Moccasin} }",
+      "caretPos": 18
+    },
+    {
+      "name": "PeachPuff",
+      "lbl": "{\\color{PeachPuff}\\blacksquare}",
+      "val": "{\\color{PeachPuff} }",
+      "caretPos": 19
+    },
+    {
+      "name": "PaleGoldenrod",
+      "lbl": "{\\color{PaleGoldenrod}\\blacksquare}",
+      "val": "{\\color{PaleGoldenrod} }",
+      "caretPos": 23
+    },
+    {
+      "name": "Khaki",
+      "lbl": "{\\color{Khaki}\\blacksquare}",
+      "val": "{\\color{Khaki} }",
+      "caretPos": 15
+    },
+    {
+      "name": "DarkKhaki",
+      "lbl": "{\\color{DarkKhaki}\\blacksquare}",
+      "val": "{\\color{DarkKhaki} }",
+      "caretPos": 19
+    },
+    {
+      "name": "Lavender",
+      "lbl": "{\\color{Lavender}\\blacksquare}",
+      "val": "{\\color{Lavender} }",
+      "caretPos": 18
+    },
+    {
+      "name": "Thistle",
+      "lbl": "{\\color{Thistle}\\blacksquare}",
+      "val": "{\\color{Thistle} }",
+      "caretPos": 17
+    },
+    {
+      "name": "Plum",
+      "lbl": "{\\color{Plum}\\blacksquare}",
+      "val": "{\\color{Plum} }",
+      "caretPos": 14
+    },
+    {
+      "name": "Violet",
+      "lbl": "{\\color{Violet}\\blacksquare}",
+      "val": "{\\color{Violet} }",
+      "caretPos": 16
+    },
+    {
+      "name": "Orchid",
+      "lbl": "{\\color{Orchid}\\blacksquare}",
+      "val": "{\\color{Orchid} }",
+      "caretPos": 16
+    },
+    {
+      "name": "Fuchsia",
+      "lbl": "{\\color{Fuchsia}\\blacksquare}",
+      "val": "{\\color{Fuchsia} }",
+      "caretPos": 17
+    },
+    {
+      "name": "Magenta",
+      "lbl": "{\\color{Magenta}\\blacksquare}",
+      "val": "{\\color{Magenta} }",
+      "caretPos": 17
+    },
+    {
+      "name": "MediumOrchid",
+      "lbl": "{\\color{MediumOrchid}\\blacksquare}",
+      "val": "{\\color{MediumOrchid} }",
+      "caretPos": 22
+    },
+    {
+      "name": "MediumPurple",
+      "lbl": "{\\color{MediumPurple}\\blacksquare}",
+      "val": "{\\color{MediumPurple} }",
+      "caretPos": 22
+    },
+    {
+      "name": "RebeccaPurple",
+      "lbl": "{\\color{RebeccaPurple}\\blacksquare}",
+      "val": "{\\color{RebeccaPurple} }",
+      "caretPos": 23
+    },
+    {
+      "name": "BlueViolet",
+      "lbl": "{\\color{BlueViolet}\\blacksquare}",
+      "val": "{\\color{BlueViolet} }",
+      "caretPos": 20
+    },
+    {
+      "name": "DarkViolet",
+      "lbl": "{\\color{DarkViolet}\\blacksquare}",
+      "val": "{\\color{DarkViolet} }",
+      "caretPos": 20
+    },
+    {
+      "name": "DarkOrchid",
+      "lbl": "{\\color{DarkOrchid}\\blacksquare}",
+      "val": "{\\color{DarkOrchid} }",
+      "caretPos": 20
+    },
+    {
+      "name": "DarkMagenta",
+      "lbl": "{\\color{DarkMagenta}\\blacksquare}",
+      "val": "{\\color{DarkMagenta} }",
+      "caretPos": 21
+    },
+    {
+      "name": "Purple",
+      "lbl": "{\\color{Purple}\\blacksquare}",
+      "val": "{\\color{Purple} }",
+      "caretPos": 16
+    },
+    {
+      "name": "Indigo",
+      "lbl": "{\\color{Indigo}\\blacksquare}",
+      "val": "{\\color{Indigo} }",
+      "caretPos": 16
+    },
+    {
+      "name": "SlateBlue",
+      "lbl": "{\\color{SlateBlue}\\blacksquare}",
+      "val": "{\\color{SlateBlue} }",
+      "caretPos": 19
+    },
+    {
+      "name": "DarkSlateBlue",
+      "lbl": "{\\color{DarkSlateBlue}\\blacksquare}",
+      "val": "{\\color{DarkSlateBlue} }",
+      "caretPos": 23
+    },
+    {
+      "name": "MediumSlateBlue",
+      "lbl": "{\\color{MediumSlateBlue}\\blacksquare}",
+      "val": "{\\color{MediumSlateBlue} }",
+      "caretPos": 25
+    },
+    {
+      "name": "GreenYellow",
+      "lbl": "{\\color{GreenYellow}\\blacksquare}",
+      "val": "{\\color{GreenYellow} }",
+      "caretPos": 21
+    },
+    {
+      "name": "Chartreuse",
+      "lbl": "{\\color{Chartreuse}\\blacksquare}",
+      "val": "{\\color{Chartreuse} }",
+      "caretPos": 20
+    },
+    {
+      "name": "LawnGreen",
+      "lbl": "{\\color{LawnGreen}\\blacksquare}",
+      "val": "{\\color{LawnGreen} }",
+      "caretPos": 19
+    },
+    {
+      "name": "Lime",
+      "lbl": "{\\color{Lime}\\blacksquare}",
+      "val": "{\\color{Lime} }",
+      "caretPos": 14
+    },
+    {
+      "name": "LimeGreen",
+      "lbl": "{\\color{LimeGreen}\\blacksquare}",
+      "val": "{\\color{LimeGreen} }",
+      "caretPos": 19
+    },
+    {
+      "name": "PaleGreen",
+      "lbl": "{\\color{PaleGreen}\\blacksquare}",
+      "val": "{\\color{PaleGreen} }",
+      "caretPos": 19
+    },
+    {
+      "name": "LightGreen",
+      "lbl": "{\\color{LightGreen}\\blacksquare}",
+      "val": "{\\color{LightGreen} }",
+      "caretPos": 20
+    },
+    {
+      "name": "MediumSpringGreen",
+      "lbl": "{\\color{MediumSpringGreen}\\blacksquare}",
+      "val": "{\\color{MediumSpringGreen} }",
+      "caretPos": 27
+    },
+    {
+      "name": "SpringGreen",
+      "lbl": "{\\color{SpringGreen}\\blacksquare}",
+      "val": "{\\color{SpringGreen} }",
+      "caretPos": 21
+    },
+    {
+      "name": "MediumSeaGreen",
+      "lbl": "{\\color{MediumSeaGreen}\\blacksquare}",
+      "val": "{\\color{MediumSeaGreen} }",
+      "caretPos": 24
+    },
+    {
+      "name": "SeaGreen",
+      "lbl": "{\\color{SeaGreen}\\blacksquare}",
+      "val": "{\\color{SeaGreen} }",
+      "caretPos": 18
+    },
+    {
+      "name": "ForestGreen",
+      "lbl": "{\\color{ForestGreen}\\blacksquare}",
+      "val": "{\\color{ForestGreen} }",
+      "caretPos": 21
+    },
+    {
+      "name": "Green",
+      "lbl": "{\\color{Green}\\blacksquare}",
+      "val": "{\\color{Green} }",
+      "caretPos": 15
+    },
+    {
+      "name": "DarkGreen",
+      "lbl": "{\\color{DarkGreen}\\blacksquare}",
+      "val": "{\\color{DarkGreen} }",
+      "caretPos": 19
+    },
+    {
+      "name": "YellowGreen",
+      "lbl": "{\\color{YellowGreen}\\blacksquare}",
+      "val": "{\\color{YellowGreen} }",
+      "caretPos": 21
+    },
+    {
+      "name": "OliveDrab",
+      "lbl": "{\\color{OliveDrab}\\blacksquare}",
+      "val": "{\\color{OliveDrab} }",
+      "caretPos": 19
+    },
+    {
+      "name": "Olive",
+      "lbl": "{\\color{Olive}\\blacksquare}",
+      "val": "{\\color{Olive} }",
+      "caretPos": 15
+    },
+    {
+      "name": "DarkOliveGreen",
+      "lbl": "{\\color{DarkOliveGreen}\\blacksquare}",
+      "val": "{\\color{DarkOliveGreen} }",
+      "caretPos": 24
+    },
+    {
+      "name": "MediumAquamarine",
+      "lbl": "{\\color{MediumAquamarine}\\blacksquare}",
+      "val": "{\\color{MediumAquamarine} }",
+      "caretPos": 26
+    },
+    {
+      "name": "DarkSeaGreen",
+      "lbl": "{\\color{DarkSeaGreen}\\blacksquare}",
+      "val": "{\\color{DarkSeaGreen} }",
+      "caretPos": 22
+    },
+    {
+      "name": "LightSeaGreen",
+      "lbl": "{\\color{LightSeaGreen}\\blacksquare}",
+      "val": "{\\color{LightSeaGreen} }",
+      "caretPos": 23
+    },
+    {
+      "name": "DarkCyan",
+      "lbl": "{\\color{DarkCyan}\\blacksquare}",
+      "val": "{\\color{DarkCyan} }",
+      "caretPos": 18
+    },
+    {
+      "name": "Teal",
+      "lbl": "{\\color{Teal}\\blacksquare}",
+      "val": "{\\color{Teal} }",
+      "caretPos": 14
+    },
+    {
+      "name": "Aqua",
+      "lbl": "{\\color{Aqua}\\blacksquare}",
+      "val": "{\\color{Aqua} }",
+      "caretPos": 14
+    },
+    {
+      "name": "Cyan",
+      "lbl": "{\\color{Cyan}\\blacksquare}",
+      "val": "{\\color{Cyan} }",
+      "caretPos": 14
+    },
+    {
+      "name": "LightCyan",
+      "lbl": "{\\color{LightCyan}\\blacksquare}",
+      "val": "{\\color{LightCyan} }",
+      "caretPos": 19
+    },
+    {
+      "name": "PaleTurquoise",
+      "lbl": "{\\color{PaleTurquoise}\\blacksquare}",
+      "val": "{\\color{PaleTurquoise} }",
+      "caretPos": 23
+    },
+    {
+      "name": "Aquamarine",
+      "lbl": "{\\color{Aquamarine}\\blacksquare}",
+      "val": "{\\color{Aquamarine} }",
+      "caretPos": 20
+    },
+    {
+      "name": "Turquoise",
+      "lbl": "{\\color{Turquoise}\\blacksquare}",
+      "val": "{\\color{Turquoise} }",
+      "caretPos": 19
+    },
+    {
+      "name": "MediumTurquoise",
+      "lbl": "{\\color{MediumTurquoise}\\blacksquare}",
+      "val": "{\\color{MediumTurquoise} }",
+      "caretPos": 25
+    },
+    {
+      "name": "DarkTurquoise",
+      "lbl": "{\\color{DarkTurquoise}\\blacksquare}",
+      "val": "{\\color{DarkTurquoise} }",
+      "caretPos": 23
+    },
+    {
+      "name": "CadetBlue",
+      "lbl": "{\\color{CadetBlue}\\blacksquare}",
+      "val": "{\\color{CadetBlue} }",
+      "caretPos": 19
+    },
+    {
+      "name": "SteelBlue",
+      "lbl": "{\\color{SteelBlue}\\blacksquare}",
+      "val": "{\\color{SteelBlue} }",
+      "caretPos": 19
+    },
+    {
+      "name": "LightSteelBlue",
+      "lbl": "{\\color{LightSteelBlue}\\blacksquare}",
+      "val": "{\\color{LightSteelBlue} }",
+      "caretPos": 24
+    },
+    {
+      "name": "PowderBlue",
+      "lbl": "{\\color{PowderBlue}\\blacksquare}",
+      "val": "{\\color{PowderBlue} }",
+      "caretPos": 20
+    },
+    {
+      "name": "LightBlue",
+      "lbl": "{\\color{LightBlue}\\blacksquare}",
+      "val": "{\\color{LightBlue} }",
+      "caretPos": 19
+    },
+    {
+      "name": "SkyBlue",
+      "lbl": "{\\color{SkyBlue}\\blacksquare}",
+      "val": "{\\color{SkyBlue} }",
+      "caretPos": 17
+    },
+    {
+      "name": "LightSkyBlue",
+      "lbl": "{\\color{LightSkyBlue}\\blacksquare}",
+      "val": "{\\color{LightSkyBlue} }",
+      "caretPos": 22
+    },
+    {
+      "name": "DeepSkyBlue",
+      "lbl": "{\\color{DeepSkyBlue}\\blacksquare}",
+      "val": "{\\color{DeepSkyBlue} }",
+      "caretPos": 21
+    },
+    {
+      "name": "DodgerBlue",
+      "lbl": "{\\color{DodgerBlue}\\blacksquare}",
+      "val": "{\\color{DodgerBlue} }",
+      "caretPos": 20
+    },
+    {
+      "name": "CornflowerBlue",
+      "lbl": "{\\color{CornflowerBlue}\\blacksquare}",
+      "val": "{\\color{CornflowerBlue} }",
+      "caretPos": 24
+    },
+    {
+      "name": "RoyalBlue",
+      "lbl": "{\\color{RoyalBlue}\\blacksquare}",
+      "val": "{\\color{RoyalBlue} }",
+      "caretPos": 19
+    },
+    {
+      "name": "Blue",
+      "lbl": "{\\color{Blue}\\blacksquare}",
+      "val": "{\\color{Blue} }",
+      "caretPos": 14
+    },
+    {
+      "name": "MediumBlue",
+      "lbl": "{\\color{MediumBlue}\\blacksquare}",
+      "val": "{\\color{MediumBlue} }",
+      "caretPos": 20
+    },
+    {
+      "name": "DarkBlue",
+      "lbl": "{\\color{DarkBlue}\\blacksquare}",
+      "val": "{\\color{DarkBlue} }",
+      "caretPos": 18
+    },
+    {
+      "name": "Navy",
+      "lbl": "{\\color{Navy}\\blacksquare}",
+      "val": "{\\color{Navy} }",
+      "caretPos": 14
+    },
+    {
+      "name": "MidnightBlue",
+      "lbl": "{\\color{MidnightBlue}\\blacksquare}",
+      "val": "{\\color{MidnightBlue} }",
+      "caretPos": 22
+    },
+    {
+      "name": "MistyRose",
+      "lbl": "{\\color{MistyRose}\\blacksquare}",
+      "val": "{\\color{MistyRose} }",
+      "caretPos": 19
+    },
+    {
+      "name": "LavenderBlush",
+      "lbl": "{\\color{LavenderBlush}\\blacksquare}",
+      "val": "{\\color{LavenderBlush} }",
+      "caretPos": 23
+    },
+    {
+      "name": "Linen",
+      "lbl": "{\\color{Linen}\\blacksquare}",
+      "val": "{\\color{Linen} }",
+      "caretPos": 15
+    },
+    {
+      "name": "OldLace",
+      "lbl": "{\\color{OldLace}\\blacksquare}",
+      "val": "{\\color{OldLace} }",
+      "caretPos": 17
+    },
+    {
+      "name": "SeaShell",
+      "lbl": "{\\color{SeaShell}\\blacksquare}",
+      "val": "{\\color{SeaShell} }",
+      "caretPos": 18
+    },
+    {
+      "name": "MintCream",
+      "lbl": "{\\color{MintCream}\\blacksquare}",
+      "val": "{\\color{MintCream} }",
+      "caretPos": 19
+    },
+    {
+      "name": "SlateGray",
+      "lbl": "{\\color{SlateGray}\\blacksquare}",
+      "val": "{\\color{SlateGray} }",
+      "caretPos": 19
+    },
+    {
+      "name": "LightSlateGray",
+      "lbl": "{\\color{LightSlateGray}\\blacksquare}",
+      "val": "{\\color{LightSlateGray} }",
+      "caretPos": 24
+    },
+    {
+      "name": "LightSteelGray",
+      "lbl": "{\\color{LightSteelGray}\\blacksquare}",
+      "val": "{\\color{LightSteelGray} }",
+      "caretPos": 24
+    },
+    {
+      "name": "FloralWhite",
+      "lbl": "{\\color{FloralWhite}\\blacksquare}",
+      "val": "{\\color{FloralWhite} }",
+      "caretPos": 21
+    },
+    {
+      "name": "AliceBlue",
+      "lbl": "{\\color{AliceBlue}\\blacksquare}",
+      "val": "{\\color{AliceBlue} }",
+      "caretPos": 19
+    },
+    {
+      "name": "GhostWhite",
+      "lbl": "{\\color{GhostWhite}\\blacksquare}",
+      "val": "{\\color{GhostWhite} }",
+      "caretPos": 20
+    },
+    {
+      "name": "Honeydew",
+      "lbl": "{\\color{Honeydew}\\blacksquare}",
+      "val": "{\\color{Honeydew} }",
+      "caretPos": 18
+    },
+    {
+      "name": "Ivory",
+      "lbl": "{\\color{Ivory}\\blacksquare}",
+      "val": "{\\color{Ivory} }",
+      "caretPos": 15
+    },
+    {
+      "name": "Azure",
+      "lbl": "{\\color{Azure}\\blacksquare}",
+      "val": "{\\color{Azure} }",
+      "caretPos": 15
+    },
+    {
+      "name": "Snow",
+      "lbl": "{\\color{Snow}\\blacksquare}",
+      "val": "{\\color{Snow} }",
+      "caretPos": 14
+    },
+    {
+      "name": "Black",
+      "lbl": "{\\color{Black}\\blacksquare}",
+      "val": "{\\color{Black} }",
+      "caretPos": 15
+    },
+    {
+      "name": "DimGray",
+      "lbl": "{\\color{DimGray}\\blacksquare}",
+      "val": "{\\color{DimGray} }",
+      "caretPos": 17
+    },
+    {
+      "name": "Gray",
+      "lbl": "{\\color{Gray}\\blacksquare}",
+      "val": "{\\color{Gray} }",
+      "caretPos": 14
+    },
+    {
+      "name": "DarkGray",
+      "lbl": "{\\color{DarkGray}\\blacksquare}",
+      "val": "{\\color{DarkGray} }",
+      "caretPos": 18
+    },
+    {
+      "name": "Silver",
+      "lbl": "{\\color{Silver}\\blacksquare}",
+      "val": "{\\color{Silver} }",
+      "caretPos": 16
+    },
+    {
+      "name": "LightGray",
+      "lbl": "{\\color{LightGray}\\blacksquare}",
+      "val": "{\\color{LightGray} }",
+      "caretPos": 19
+    },
+    {
+      "name": "Gainsboro",
+      "lbl": "{\\color{Gainsboro}\\blacksquare}",
+      "val": "{\\color{Gainsboro} }",
+      "caretPos": 19
+    },
+    {
+      "name": "WhiteSmoke",
+      "lbl": "{\\color{WhiteSmoke}\\blacksquare}",
+      "val": "{\\color{WhiteSmoke} }",
+      "caretPos": 20
+    },
+    {
+      "name": "White",
+      "lbl": "{\\color{White}\\blacksquare}",
+      "val": "{\\color{White} }",
+      "caretPos": 15
+    }
+  ]
+}

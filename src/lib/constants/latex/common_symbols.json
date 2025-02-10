@@ -1,0 +1,194 @@
+{
+  "title": "Common Symbols",
+  "dispLen": 7,
+  "symbols": [
+    {
+      "name": "Superscript (Exponent)",
+      "lbl": "x^n",
+      "val": "^{}",
+      "caretPos": 2
+    },
+    {
+      "name": "Subscript",
+      "lbl": "x_n",
+      "val": "_{}",
+      "caretPos": 2
+    },
+    {
+      "name": "Square Root",
+      "lbl": "\\sqrt{x}",
+      "val": "\\sqrt{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Fraction",
+      "lbl": "\\frac{x}{y}",
+      "val": "\\frac{}{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Summation",
+      "lbl": "\\sum",
+      "val": "\\sum_{}^{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Product",
+      "lbl": "\\prod",
+      "val": "\\prod_{}^{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Integral",
+      "lbl": "\\int",
+      "val": "\\int_{}^{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Nth Root",
+      "lbl": "\\sqrt[n]{x}",
+      "val": "\\sqrt[]{}",
+      "caretPos": 6
+    },
+    {
+      "name": "Contour Integral",
+      "lbl": "\\oint",
+      "val": "\\oint_{}^{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Derivative",
+      "lbl": "\\frac{d}{dx}",
+      "val": "\\frac{d }{dx}",
+      "caretPos": 8
+    },
+    {
+      "name": "Partial Derivative",
+      "lbl": "\\frac{\\partial}{\\partial x}",
+      "val": "\\frac{\\partial }{\\partial x}",
+      "caretPos": 15
+    },
+    {
+      "name": "Implies",
+      "lbl": "\\implies",
+      "val": "\\implies "
+    },
+    {
+      "name": "If and only If",
+      "lbl": "\\iff",
+      "val": "\\iff "
+    },
+    {
+      "name": "Multiplication",
+      "lbl": "\\times",
+      "val": "\\times "
+    },
+    {
+      "name": "Number Sign",
+      "lbl": "\\#",
+      "val": "\\# "
+    },
+    {
+      "name": "Wedge",
+      "lbl": "\\wedge",
+      "val": "\\wedge "
+    },
+    {
+      "name": "Logical Or",
+      "lbl": "\\vee",
+      "val": "\\vee "
+    },
+    {
+      "name": "Element Of",
+      "lbl": "\\in",
+      "val": "\\in "
+    },
+    {
+      "name": "Not an Element Of",
+      "lbl": "\\notin",
+      "val": "\\notin "
+    },
+    {
+      "name": "Set Minus",
+      "lbl": "\\smallsetminus",
+      "val": "\\smallsetminus "
+    },
+    {
+      "name": "Limit",
+      "lbl": "\\lim_{x \\to 0}",
+      "val": "\\lim_{x \\to 0} ",
+      "isBlkMath": true
+    },
+    {
+      "name": "Infinity",
+      "lbl": "\\infty",
+      "val": "\\infty "
+    },
+    {
+      "name": "Plus-Minus Sign",
+      "lbl": "\\pm",
+      "val": "\\pm "
+    },
+    {
+      "name": "Minus-Plus Sign",
+      "lbl": "\\mp",
+      "val": "\\mp "
+    },
+    {
+      "name": "Empty Set",
+      "lbl": "\\emptyset",
+      "val": "\\emptyset "
+    },
+    {
+      "name": "For All",
+      "lbl": "\\forall",
+      "val": "\\forall "
+    },
+    {
+      "name": "There Exists",
+      "lbl": "\\exists",
+      "val": "\\exists "
+    },
+    {
+      "name": "Not Equal To",
+      "lbl": "\\neq",
+      "val": "\\neq "
+    },
+    {
+      "name": "Delta",
+      "lbl": "\\Delta",
+      "val": "\\Delta "
+    },
+    {
+      "name": "Right Arrow",
+      "lbl": "\\to",
+      "val": "\\to "
+    },
+    {
+      "name": "Absolute Value",
+      "lbl": "|",
+      "val": "| "
+    },
+    {
+      "name": "Does Not Divide",
+      "lbl": "\\nmid",
+      "val": "\\nmid "
+    },
+    {
+      "name": "Set Braces",
+      "lbl": "\\{\\}",
+      "val": "\\{  \\}",
+      "caretPos": 3
+    },
+    {
+      "name": "Negation",
+      "lbl": "\\neg",
+      "val": "\\neg "
+    },
+    {
+      "name": "Approximately Equal To",
+      "lbl": "\\approx",
+      "val": "\\approx "
+    }
+  ]
+}

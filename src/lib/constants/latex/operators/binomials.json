@@ -1,0 +1,43 @@
+{
+  "title": "Binomials",
+  "dispLen": 3,
+  "sqBtn": false,
+  "symbols": [
+    {
+      "name": "Binomial Coefficient",
+      "lbl": "\\binom{n}{k}",
+      "val": "\\binom{}{}",
+      "caretPos": 7
+    },
+    {
+      "name": "Displaystyle Binomial Coefficient",
+      "lbl": "\\dbinom{n}{k}",
+      "val": "\\dbinom{}{}",
+      "caretPos": 8
+    },
+    {
+      "name": "Set Notation Brace",
+      "lbl": "{n \\brace k}",
+      "val": "{ \\brace }",
+      "caretPos": 1
+    },
+    {
+      "name": "Choose Notation",
+      "lbl": "{n \\choose k}",
+      "val": "{ \\choose }",
+      "caretPos": 1
+    },
+    {
+      "name": "Textstyle Binomial Coefficient",
+      "lbl": "\\tbinom{n}{k}",
+      "val": "\\tbinom{}{}",
+      "caretPos": 8
+    },
+    {
+      "name": "Bracket Notation",
+      "lbl": "{n\\brack k}",
+      "val": "{ \\brack }",
+      "caretPos": 1
+    }
+  ]
+}
