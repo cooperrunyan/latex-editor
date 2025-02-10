@@ -50,13 +50,11 @@ export default function Home() {
 
   return (
     <>
-      <Banner />
       <div className="flex h-screen flex-col *:h-full *:max-h-[calc(50%-1rem)]">
-        <div className="flex flex-row border-b-1.5 *:w-1/2 dark:border-b-default-50">
-          <EditorPanel latexPanelRef={latexPanelRef} />
-          <ToolPanel />
-        </div>
         <LaTeXPanel ref={latexPanelRef} />
+        <div className="flex flex-row border-t-1.5 *:w-full dark:border-t-default-50">
+          <EditorPanel latexPanelRef={latexPanelRef} />
+        </div>
         <div className="absolute bottom-4 right-4 flex !h-fit gap-2">
           <Tooltip
             disableAnimation
@@ -66,12 +64,12 @@ export default function Home() {
           >
             <Button
               aria-label="Copy LaTeX code to clipboard"
-              variant="light"
+              variant="bordered"
               isIconOnly
               className="border-1 text-base"
               isLoading={isCopying}
               radius="sm"
-              onClick={handleCopy}
+              onPress={handleCopy}
             >
               <Copy size={18} />
             </Button>
@@ -84,19 +82,18 @@ export default function Home() {
           >
             <Button
               aria-label="Download LaTeX code as a file"
-              variant="light"
+              variant="bordered"
               isIconOnly
               className="border-1 text-base"
               isLoading={isDownloading}
               radius="sm"
-              onClick={handleDownload}
+              onPress={handleDownload}
             >
               <Download size={18} />
             </Button>
           </Tooltip>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
