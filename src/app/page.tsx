@@ -13,6 +13,8 @@ import { EditorPanel } from '@/ui/editor-panel';
 import { MathJax } from 'better-react-mathjax'
 
 export default function Home() {
+  'use client';
+
   const [input, setInput] = useState("$$\ne^{j\\theta} = \\cos(\\theta) + j \\sin(\\theta)\n$$\n");
 
   const [isDownloading, setIsDownloading] = useState(false);
