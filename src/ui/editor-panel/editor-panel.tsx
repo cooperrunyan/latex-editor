@@ -21,16 +21,11 @@ import 'prismjs/themes/prism-coy.css';
 import 'prismjs/components/prism-latex';
 
 interface EditorPanelProps {
-  latexPanelRef: RefObject<latexPanelRef>;
+  input: string,
+  setInput: (i:string) => void
 }
 
-export function EditorPanel({ latexPanelRef }: EditorPanelProps) {
-  const [equation, setEquation] = useState('');
-
-  useEffect(() => {
-    latexPanelRef.current?.setEquation(equation);
-  }, [equation]);
-
+export function EditorPanel({ input, setInput }: EditorPanelProps) {
   const highlightWithLineNumbers = (
     text: string,
     grammar: Grammar,
@@ -51,9 +46,9 @@ export function EditorPanel({ latexPanelRef }: EditorPanelProps) {
         className="min-h-full font-mono text-sm sm:text-base"
         preClassName="!pl-12 !outline-none"
         textareaClassName="!pl-12 !outline-none"
-        value={equation}
-        onKeyDown={(e) => processPattern({ keyboardEvent: e, equation })}
-        onValueChange={setEquation}
+        value={input}
+        onKeyDown={(e) => processPattern({ keyboardEvent: e, equation: input })}
+        onValueChange={setInput}
         highlight={(code) =>
           highlightWithLineNumbers(code, languages.latex!, 'latex')
         }

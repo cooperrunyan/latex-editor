@@ -4,76 +4,53 @@
 
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { Button, Tooltip } from '@heroui/react';
-import { Copy, Download } from 'lucide-react';
+import { Download } from 'lucide-react';
 
-import { Banner } from '@/ui/banner';
 import { EditorPanel } from '@/ui/editor-panel';
-import { Footer } from '@/ui/footer';
-import { LaTeXPanel, latexPanelRef } from '@/ui/latex-panel';
-import { ToolPanel } from '@/ui/tool-panel';
-
-import 'katex/dist/katex.min.css';
-import 'katex/dist/contrib/mhchem';
-import 'katex/dist/contrib/render-a11y-string';
+import { MathJax } from 'better-react-mathjax'
 
 export default function Home() {
-  const latexPanelRef = useRef<latexPanelRef>(null);
+  const [input, setInput] = useState("$$\ne^{j\\theta} = \\cos(\\theta) + j \\sin(\\theta)\n$$\n");
 
   const [isDownloading, setIsDownloading] = useState(false);
-  const [isCopying, setIsCopying] = useState(false);
 
-  // Conditionally import the copy-tex module on the client side
-  useEffect(() => {
-    require('katex/contrib/copy-tex');
-  }, []);
-
-  async function handleCopy() {
-    setIsCopying(true);
-    try {
-      await latexPanelRef.current?.copyToClipboard();
-    } finally {
-      setIsCopying(false);
-    }
+  const dataurl = () => {
+    const serializer = new XMLSerializer();
+    const svg = document.querySelector("#latex-equation svg");
+    if (!svg) throw new Error('element not found');
+    const source = '<?xml version="1.0" standalone="no"?>\r\n' + serializer.serializeToString(svg);
+    return  "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
   }
 
-  async function handleDownload() {
-    setIsDownloading(true);
+  const handleDownload = () => {
     try {
-      await latexPanelRef.current?.download();
-    } finally {
-      setIsDownloading(false);
+      const el = document.createElement('a');
+      el.href = dataurl();
+      el.target = '_blank';
+      el.download = 'latex-equation.svg';
+      el.click();
+      el.remove();
+    } catch (error) {
+      throw error;
     }
+    
   }
 
   return (
     <>
       <div className="flex h-screen flex-col *:h-full *:max-h-[calc(50%-1rem)]">
-        <LaTeXPanel ref={latexPanelRef} />
+        <div className="flex w-full flex-wrap items-center overflow-auto first:*:ml-auto last:*:mr-auto">
+          <div className="flex items-center px-8 py-4" id="latex-equation">
+            <MathJax dynamic typesettingOptions={{fn: 'tex2svg' }}>{input}</MathJax>
+          </div>
+        </div>
         <div className="flex flex-row border-t-1.5 *:w-full dark:border-t-default-50">
-          <EditorPanel latexPanelRef={latexPanelRef} />
+          <EditorPanel input={input} setInput={setInput} />
         </div>
         <div className="absolute bottom-4 right-4 flex !h-fit gap-2">
-          <Tooltip
-            disableAnimation
-            closeDelay={0}
-            className="text-xs"
-            content="Copy"
-          >
-            <Button
-              aria-label="Copy LaTeX code to clipboard"
-              variant="bordered"
-              isIconOnly
-              className="border-1 text-base"
-              isLoading={isCopying}
-              radius="sm"
-              onPress={handleCopy}
-            >
-              <Copy size={18} />
-            </Button>
-          </Tooltip>
           <Tooltip
             disableAnimation
             closeDelay={0}
