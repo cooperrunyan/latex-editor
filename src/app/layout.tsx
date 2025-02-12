@@ -7,6 +7,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 
+import { MathJaxContext } from 'better-react-mathjax'; 
+
 import {
   BASE_URL,
   NAME,
@@ -66,7 +68,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0a0a0a',
+  // themeColor: '#0a0a0a',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
   width: 'device-width',
   initialScale: 1,
   userScalable: false,
@@ -86,7 +92,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={cn('min-w-[768px] overflow-y-hidden antialiased')}>
-        <Providers>{children}</Providers>
+          <Providers>{children}</Providers>
         <Analytics />
       </body>
     </html>

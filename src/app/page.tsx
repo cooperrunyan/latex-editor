@@ -4,18 +4,64 @@
 
 'use client';
 
-import { useState } from 'react';
+import { createContext, PropsWithChildren, useContext, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Button, Tooltip } from '@heroui/react';
 import { Download } from 'lucide-react';
 
 import { EditorPanel } from '@/ui/editor-panel';
-import { MathJax } from 'better-react-mathjax'
+
+import { mathjax } from 'mathjax-full/js/mathjax';
+import { TeX } from 'mathjax-full/js/input/tex';
+import { SVG } from 'mathjax-full/js/output/svg';
+import { MathDocument } from 'mathjax-full/js/core/MathDocument';
+import { browserAdaptor} from 'mathjax-full/js/adaptors/browserAdaptor';
+import { RegisterHTMLHandler } from 'mathjax-full/js/handlers/html';
+import { AllPackages } from 'mathjax-full/js/input/tex/AllPackages'
+
+const LatexContext = createContext<null | MathDocument<HTMLElement, Text, Document>>(null)
+
+const LatexProvider = ({children}: PropsWithChildren) => {
+  const doc = useMemo(() => {
+    RegisterHTMLHandler(browserAdaptor());
+    return mathjax.document('', {InputJax: new TeX({packages: AllPackages}), OutputJax: new SVG({ scale: 1.15 })});
+  }, []);
+
+  return (
+    <LatexContext.Provider value={doc}>
+      {children}
+    </LatexContext.Provider>
+  )
+}
+
+const HTMLElementRenderer = ({ element }: {element?: HTMLElement }) => {
+  const ref = useRef<null | HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current || !element) return;
+
+    if (element.querySelector('[data-mml-node="merror"]')) return
+
+    ref.current.replaceChildren(element)
+  }, [element]);  
+
+  return <div ref={ref} />
+}
+
+
+const Latex = ({input}: {input: string}) => {
+  const doc = useContext(LatexContext);
+
+  const result = useMemo(() => {
+    if (!doc) return;
+    return doc.convert(input, {display: true}) as HTMLElement; 
+  }, [doc, input]);
+  
+  return <HTMLElementRenderer element={result}/>
+}
 
 export default function Home() {
-  'use client';
-
-  const [input, setInput] = useState("$$\ne^{j\\theta} = \\cos(\\theta) + j \\sin(\\theta)\n$$\n");
+  const [input, setInput] = useState("e^{j\\theta} = \\cos(\\theta) + j \\sin(\\theta)\n");
 
   const [isDownloading, setIsDownloading] = useState(false);
 
@@ -46,7 +92,9 @@ export default function Home() {
       <div className="flex h-screen flex-col *:h-full *:max-h-[calc(50%-1rem)]">
         <div className="flex w-full flex-wrap items-center overflow-auto first:*:ml-auto last:*:mr-auto">
           <div className="flex items-center px-8 py-4" id="latex-equation">
-            <MathJax dynamic typesettingOptions={{fn: 'tex2svg' }}>{input}</MathJax>
+            <LatexProvider>
+              <Latex input={input} />
+            </LatexProvider>
           </div>
         </div>
         <div className="flex flex-row border-t-1.5 *:w-full dark:border-t-default-50">

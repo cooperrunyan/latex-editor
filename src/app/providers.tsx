@@ -15,12 +15,10 @@ export function Providers({ children, className }: ProvidersProps) {
   const router = useRouter();
 
   return (
-    <MathJaxContext config={{options: {enableMenu: false, svg: {displayIndent: '10em'}}}}>
       <ThemeProvider attribute="class" defaultTheme="system">
         <HeroUIProvider navigate={router.push} className={className}>
           {children}
         </HeroUIProvider>
       </ThemeProvider>
-    </MathJaxContext>
   );
 }
