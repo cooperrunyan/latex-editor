@@ -23,6 +23,7 @@ const LatexContext = createContext<null | MathDocument<HTMLElement, Text, Docume
 
 const LatexProvider = ({ children }: PropsWithChildren) => {
   const doc = useMemo(() => {
+    if (typeof window == 'undefined') return null as any;
     RegisterHTMLHandler(browserAdaptor());
     return mathjax.document('', { InputJax: new TeX({ packages: AllPackages }), OutputJax: new SVG({ scale: 1.15 }) });
   }, []);
