@@ -1,99 +1,66 @@
-/**
- * Shows the LaTeX equation.
- *
- * References:
- * https://katex.org/
- * https://katex.org/docs/options
- */
+import {
+	createContext,
+	type PropsWithChildren,
+	useContext,
+	useEffect,
+	useMemo,
+	useRef,
+} from "react";
 
-import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+import { mathjax } from "mathjax-full/js/mathjax";
+import { TeX } from "mathjax-full/js/input/tex";
+import { SVG } from "mathjax-full/js/output/svg";
+import type { MathDocument } from "mathjax-full/js/core/MathDocument";
+import { browserAdaptor } from "mathjax-full/js/adaptors/browserAdaptor";
+import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html";
+import { AllPackages } from "mathjax-full/js/input/tex/AllPackages";
 
-import html2canvas from 'html2canvas';
-import { BlockMath } from 'react-katex';
+const LatexContext = createContext<null | MathDocument<
+	HTMLElement,
+	Text,
+	Document
+>>(null);
 
-export interface latexPanelRef {
-  setEquation: (value: string) => void;
-  download: () => Promise<void>;
-  copyToClipboard: () => Promise<void>;
-}
+const LatexProvider = ({ children }: PropsWithChildren) => {
+	const doc = useMemo(() => {
+		if (typeof window === "undefined") return null as never;
+		RegisterHTMLHandler(browserAdaptor());
+		return mathjax.document("", {
+			InputJax: new TeX({ packages: AllPackages }),
+			OutputJax: new SVG({ scale: 1.15 }),
+		});
+	}, []);
 
-const latexPanel = forwardRef<latexPanelRef>((_, ref) => {
-  const [equation, setEquation] = useState('');
-  const equationRef = useRef<HTMLDivElement>(null);
+	return <LatexContext.Provider value={doc}>{children}</LatexContext.Provider>;
+};
 
-  async function handleCopy() {
-    const element = equationRef.current;
-    if (!element) {
-      throw new Error('Element not found');
-    }
+const HTMLElementRenderer = ({ element }: { element?: HTMLElement }) => {
+	const ref = useRef<null | HTMLDivElement>(null);
 
-    try {
-      const canvas = await html2canvas(element);
-      const blob = await new Promise<Blob | null>((resolve) =>
-        canvas.toBlob((blob) => resolve(blob), 'image/png'),
-      );
+	useEffect(() => {
+		if (!ref.current || !element) return;
 
-      if (blob) {
-        await navigator.clipboard.write([
-          new ClipboardItem({
-            'image/png': blob,
-          }),
-        ]);
-      } else {
-        throw new Error('Blob conversion failed');
-      }
-    } catch (error) {
-      throw error;
-    }
-  }
+		if (element.querySelector('[data-mml-node="merror"]')) return;
 
-  async function handleDownload() {
-    const element = equationRef.current;
-    if (!element) {
-      throw new Error('Element not found');
-    }
+		ref.current.replaceChildren(element);
+	}, [element]);
 
-    try {
-      const canvas = await html2canvas(element);
-      const el = document.createElement('a');
-      el.href = canvas.toDataURL('image/png');
-      el.target = '_blank';
-      el.download = 'latex-equation.png';
-      el.click();
-      el.remove();
-    } catch (error) {
-      throw error;
-    }
-  }
+	return <div ref={ref} />;
+};
 
-  useImperativeHandle(ref, () => ({
-    setEquation,
-    download: handleDownload,
-    copyToClipboard: handleCopy,
-  }));
+const InnerLatex = ({ input }: { input: string }) => {
+	const doc = useContext(LatexContext);
 
-  return (
-    <div className="flex w-full flex-wrap items-center overflow-auto first:*:ml-auto last:*:mr-auto">
-      <div
-        id="equation-render-element"
-        ref={equationRef}
-        className="flex items-center px-8 py-4"
-      >
-        <BlockMath
-          renderError={(error) => (
-            <span
-              className="m-2 animate-fade-in rounded-lg bg-[hsl(var(--heroui-danger)/0.2)] px-4 py-2
-                text-sm"
-            >
-              {error.message}
-            </span>
-          )}
-        >
-          {equation}
-        </BlockMath>
-      </div>
-    </div>
-  );
-});
+	const result = useMemo(() => {
+		if (!doc) return;
+		return doc.convert(input, { display: true }) as HTMLElement;
+	}, [doc, input]);
 
-export { latexPanel as LaTeXPanel };
+	return <HTMLElementRenderer element={result} />;
+};
+
+export const Latex = ({ children }: { children: string }) => (
+	<LatexProvider>
+		<InnerLatex input={children} />
+	</LatexProvider>
+);

@@ -7,22 +7,22 @@
  * https://codesandbox.io/p/sandbox/react-simple-editor-linenumbers-wy240?file=%2Fsrc%2Findex.js
  */
 
-import { RefObject, useEffect, useState } from 'react';
+import { RefObject, useEffect, useState } from "react";
 
-import { Grammar, highlight, languages } from 'prismjs';
-import Editor from 'react-simple-code-editor';
+import { Grammar, highlight, languages } from "prismjs";
+import Editor from "react-simple-code-editor";
 
-import { EDITOR_PLACEHOLDER } from '@/lib/constants/constants';
-import { latexPanelRef } from '@/ui/latex-panel';
+import { EDITOR_PLACEHOLDER } from "@/lib/constants/constants";
+import { latexPanelRef } from "@/ui/latex-panel";
 
-import { processPattern } from './process-pattern';
+import { processPattern } from "./process-pattern";
 
-import 'prismjs/themes/prism-coy.css';
-import 'prismjs/components/prism-latex';
+import "prismjs/themes/prism-coy.css";
+import "prismjs/components/prism-latex";
 
 interface EditorPanelProps {
-  input: string,
-  setInput: (i:string) => void
+  input: string;
+  setInput: (i: string) => void;
 }
 
 export function EditorPanel({ input, setInput }: EditorPanelProps) {
@@ -32,12 +32,13 @@ export function EditorPanel({ input, setInput }: EditorPanelProps) {
     language: string,
   ) =>
     highlight(text, grammar, language)
-      .split('\n')
+      .split("\n")
       .map(
         (line, i) =>
-          `<span style='position:absolute;left:0px;color:#cccccc;text-align:right;width:40px'>${i + 1}</span>${line}`,
+          `<span style='position:absolute;left:0px;color:#cccccc;text-align:right;width:40px'>${i + 1
+          }</span>${line}`,
       )
-      .join('\n');
+      .join("\n");
 
   return (
     <div className="h-full overflow-y-auto border-r-1.5 dark:border-r-default-50">
@@ -50,8 +51,7 @@ export function EditorPanel({ input, setInput }: EditorPanelProps) {
         onKeyDown={(e) => processPattern({ keyboardEvent: e, equation: input })}
         onValueChange={setInput}
         highlight={(code) =>
-          highlightWithLineNumbers(code, languages.latex!, 'latex')
-        }
+          highlightWithLineNumbers(code, languages.latex!, "latex")}
         padding={10}
         autoFocus
         textareaId="editor"
