@@ -38,33 +38,39 @@ const DEFAULT_INPUT = String.raw`\begin{align}
 \end{align}`;
 
 export default function Home() {
-	const inputRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLDivElement>(null);
 
-	const [input, setInput] = useState(DEFAULT_INPUT);
+  const [input, setInput] = useState(DEFAULT_INPUT);
 
-	return (
-		<>
-			<div className="flex h-screen flex-col *:h-full *:max-h-[calc(50%-1rem)]">
-				<div className="flex w-full flex-wrap items-center overflow-auto first:*:ml-auto last:*:mr-auto">
-					<div ref={inputRef} className="flex items-center px-8 py-4">
-						<Latex>{input}</Latex>
-					</div>
-				</div>
-				<div className="flex flex-row border-t-1.5 *:w-full dark:border-t-default-50">
-					<EditorPanel input={input} setInput={setInput} />
-				</div>
-				<Toolbar
-					className="absolute bottom-4 right-4"
-					download={() => download(inputRef.current, "Latex.png")}
-					copy={() =>
-						navigator.clipboard?.write?.([
-							new ClipboardItem({
-								"image/png": (() => imageBlob(inputRef.current, "image/png"))(),
-							}),
-						])
-					}
-				/>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div className="flex h-screen flex-col *:h-full *:max-h-[calc(50%-1rem)]">
+        <div className="flex w-full flex-wrap items-center overflow-auto first:*:ml-auto last:*:mr-auto">
+          <div ref={inputRef} className="flex items-center px-8 py-4">
+            <Latex>{input}</Latex>
+          </div>
+        </div>
+        <div className="flex flex-row border-t-1.5 *:w-full dark:border-t-default-50">
+          <EditorPanel input={input} setInput={setInput} />
+        </div>
+        <Toolbar
+          className="absolute bottom-4 right-4"
+          download={async () => {
+            if (!inputRef.current) return;
+            return download(inputRef.current, "Latex.png");
+          }}
+          copy={() =>
+            navigator.clipboard?.write?.([
+              new ClipboardItem({
+                "image/png": (async () => {
+                  if (!inputRef.current) return null as never;
+                  return imageBlob(inputRef.current, "image/png");
+                })(),
+              }),
+            ])
+          }
+        />
+      </div>
+    </>
+  );
 }

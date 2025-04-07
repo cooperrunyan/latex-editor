@@ -13,7 +13,6 @@ import { Grammar, highlight, languages } from "prismjs";
 import Editor from "react-simple-code-editor";
 
 import { EDITOR_PLACEHOLDER } from "@/lib/constants/constants";
-import { latexPanelRef } from "@/ui/latex-panel";
 
 import { processPattern } from "./process-pattern";
 
@@ -51,7 +50,8 @@ export function EditorPanel({ input, setInput }: EditorPanelProps) {
         onKeyDown={(e) => processPattern({ keyboardEvent: e, equation: input })}
         onValueChange={setInput}
         highlight={(code) =>
-          highlightWithLineNumbers(code, languages.latex!, "latex")}
+          highlightWithLineNumbers(code, languages.latex!, "latex")
+        }
         padding={10}
         autoFocus
         textareaId="editor"
